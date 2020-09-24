@@ -5661,9 +5661,11 @@ body {
       {
         disable: [
         function(date) {
-            return (date.getDay() == 0 || date.getDay() == 6
-            || (date.getMonth() >= 6 && date.getMonth() <= 7)
-            || (date < new Date()));
+            return date.getDay() == 0
+            || date.getDay() == 2
+            || date.getDay() == 3
+            || date.getDay() == 6
+            || date < new Date();
         },
         ],
         dateFormat: "m-d-Y",      
